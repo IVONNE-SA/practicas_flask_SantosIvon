@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title> "Menu principal"</title>
+</head>
+<body>
+    <h1>Mi aplicacion Flask</h1>
+    <h2>Menu</h2>
+    <ul>
+        <li><a href="{{ url_for('alumnos') }}">Alumnos</a></li>
+        <li><a href="{{ url_for('contacto') }}">Contacto</a></li>
+    </ul>
+</body>
+</html>
+<head>
+    <meta charset="UTF-8">
+    <title>
+        "Menu principal"
+    </title>
+    <link rel="stylesheet" 
+    href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>

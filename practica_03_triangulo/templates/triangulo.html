@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Triángulos</title>
+</head>
+<body>
+
+    <h1>Calculadora de Triángulos</h1>
+    <p>Escribe los datos de tu triángulo aquí abajo para calcular su área y perímetro:</p>
+
+    <!-- Este formulario envía los datos directo a nuestro código de Python -->
+    <form method="POST">
+        
+        <h3>Sección 1: Datos para calcular el Área</h3>
+        <label>Base del triángulo:</label>
+        <input name="caja_base" type="number" step="any" required>
+        <br><br>
+        
+        <label>Altura del triángulo:</label>
+        <input name="caja_altura" type="number" step="any" required>
+        <br><br>
+
+        <h3>Sección 2: Datos para calcular el Perímetro</h3>
+        <label>Lado número 1:</label>
+        <input name="caja_lado1" type="number" step="any" required>
+        <br><br>
+        
+        <label>Lado número 2:</label>
+        <input name="caja_lado2" type="number" step="any" required>
+        <br><br>
+        
+        <label>Lado número 3:</label>
+        <input name="caja_lado3" type="number" step="any" required>
+        <br><br>
+
+        <!-- Este botón activa todo el proceso matemático -->
+        <button type="submit">Calcular Resultados</button>
+    </form>
+
+    <!-- Esto de abajo solo se va a mostrar cuando Python ya tenga listos los cálculos -->
+    {% if area is not none and perimetro is not none %}
+        <h2>Resultados finales:</h2>
+        <p><strong>El Área es:</strong> {{ area }}</p>
+        <p><strong>El Perímetro es:</strong> {{ perimetro }}</p>
+    {% endif %}
+
+</body>
+</html>
